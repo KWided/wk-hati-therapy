@@ -241,8 +241,8 @@ em{font-family:inherit;font-style:italic;font-weight:400}
 
 
 
-/* Typographie unifiée : Candara pour les textes, Cambria pour les titres */
-:root{--font-body:Candara,Calibri,'Segoe UI',sans-serif;--font-display:Cambria,'Palatino Linotype',Georgia,serif;--serif:var(--font-display);--sans:var(--font-body)}
+/* Typographie unifiée : Cambria pour les textes et les titres */
+:root{--font-body:Cambria,'Palatino Linotype',Georgia,serif;--font-display:Cambria,'Palatino Linotype',Georgia,serif;--serif:var(--font-display);--sans:var(--font-body)}
 *,*::before,*::after{font-family:var(--font-body)!important}
 h1,h2,h3,h4,h5,h6,.faq-item summary,.review-cards blockquote p,.intro-band p,.booking-strip p,.placeholder-copy strong,.legal-content h1,.legal-content h2{font-family:var(--font-display)!important}
 body{font-family:var(--font-body)!important;font-size:16px;line-height:1.75;letter-spacing:.005em}
@@ -283,12 +283,7 @@ body{background:linear-gradient(180deg,#fcf8f8 0%,#f9f1f3 48%,#fcf8f8 100%)}
 .shop-product:hover{transform:translateY(-4px);box-shadow:0 18px 34px rgba(59,41,42,.1)}
 .shop-product-image{aspect-ratio:1.05;overflow:hidden;background:#f3e9e8}
 .shop-product-image img{width:100%;height:100%;object-fit:cover;object-position:center 48%;display:block;transition:transform .4s ease}
-.shop-product:nth-child(1) .shop-product-image img{object-position:center 38%}
-.shop-product:nth-child(2) .shop-product-image img{object-position:center 67%;transform:scale(1.16)}
-.shop-product:nth-child(3) .shop-product-image img{object-position:center 38%}
-.shop-product:nth-child(4) .shop-product-image img{object-position:center 12%}
 .shop-product:hover .shop-product-image img{transform:scale(1.035)}
-.shop-product:nth-child(2):hover .shop-product-image img{transform:scale(1.2)}
 .shop-product-info{padding:20px 20px 22px}
 .shop-product-info>span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9a6870}
 .shop-product-info h3{margin:8px 0 8px;font:500 21px/1.25 var(--font-display)!important;color:#332a2b}
@@ -296,3 +291,43 @@ body{background:linear-gradient(180deg,#fcf8f8 0%,#f9f1f3 48%,#fcf8f8 100%)}
 .shop-product-info small{display:block;padding-top:12px;border-top:1px solid rgba(177,139,109,.25);font-size:11px;letter-spacing:.04em;color:#765b5e}
 @media(max-width:1000px){.shop-products{grid-template-columns:repeat(2,minmax(0,1fr))}.shop-intro{gap:42px}}
 @media(max-width:700px){.shop-section{padding:70px 22px}.shop-intro{grid-template-columns:1fr;gap:28px;margin-bottom:36px}.shop-cover{aspect-ratio:1.15}.shop-products{gap:12px}.shop-product-info{padding:15px 14px 17px}.shop-product-info h3{font-size:19px!important}.shop-product-info p{font-size:13px;min-height:92px}.shop-product-info small{font-size:10px}}
+
+/* Ajustements demandés : lecture allégée, produits recadrés et typographie raffinée */
+.section-kicker span,.service-number{display:none!important}
+.reviews-intro>p{display:none}
+.review-cards blockquote{min-height:230px}
+.review-cards blockquote p{font-size:16px;line-height:1.65}
+.shop-cover{aspect-ratio:4/5}
+.shop-cover img{object-fit:contain;object-position:center}
+.shop-product-image{background:#f4edeb;padding:8px}
+.shop-product-image img{object-fit:contain;object-position:center}
+.shop-product:hover .shop-product-image img{transform:none}
+.shop-product-info small{display:none}
+
+/* Deux familles d’écriture pour un ensemble lisible et cohérent */
+.button,.button-small,.header-cta,.card-link,.text-link,.site-footer,.site-footer a,.site-footer small,.main-nav{font-family:var(--font-display)!important}
+.button,.button-small,.header-cta,.card-link,.text-link,.site-footer,.site-footer a{font-style:italic}
+.button{background:#65434b;border-color:#65434b;color:#fff;font-size:15px;font-weight:600;letter-spacing:.02em;text-transform:none}
+.button:hover{background:#493139;border-color:#493139}
+.button-small,.header-cta{font-size:14px;letter-spacing:.015em}
+.card-link{background:#65434b;color:#fff;font-size:14px;font-weight:600;letter-spacing:.01em}
+.text-link{font-size:16px;color:#49373c;letter-spacing:.015em}
+.main-nav,.main-nav a{font-family:var(--font-display)!important}
+.main-nav{font-style:normal;font-size:15px;color:#3e3034}
+.button-light{background:#fff9f8!important;color:#49373c!important;border-color:#b98e98!important}
+.button-light:hover{background:#493139!important;color:#fff!important}
+.site-footer{background:#f2e5e7!important;color:#44343a!important;border-top:1px solid #d7bbc0!important;font-size:14px}
+.site-footer a:not(.footer-brand){color:#44343a!important;border-color:#b98e98!important}
+.site-footer small{color:#604c51!important;font-size:13px}
+.payment-methods{display:flex;align-items:center;gap:12px;white-space:nowrap;font-style:normal!important}
+.payment-methods>span{display:inline-flex;align-items:center;gap:6px;font-family:Arial,sans-serif!important;font-size:11px;font-style:normal!important;font-weight:600;color:#49373c}
+.payment-paypal{font-size:15px!important;font-weight:700!important;font-style:italic!important;letter-spacing:-.06em;color:#183b70!important}
+.payment-card svg,.payment-cash svg{width:27px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:700px){.payment-methods{width:100%;justify-content:center;order:5;padding:10px 0;border-top:1px solid #d7bbc0}.site-footer small{order:6}}
+.founder-image{aspect-ratio:2/3;min-height:0;max-height:none}
+.founder-image img{height:100%;min-height:0;max-height:none;object-fit:cover;object-position:center}
+@media(max-width:700px){.founder-image,.founder-image img{min-height:0;max-height:none}}
+@media(max-width:700px){.shop-cover{aspect-ratio:4/5}.review-cards blockquote{min-height:0}.review-cards blockquote p{font-size:16px}}
+
+/* Le texte courant reprend la famille élégante des titres et des boutons */
+p,li,.faq-answer,.faq-health-note p,.about-copy>p,.services-heading>p,.shop-copy>p,.ebook-copy>p,.contact-main>p,.contact-item p{font-family:var(--font-display)!important;color:#4b3e42!important}
