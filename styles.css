@@ -331,3 +331,5 @@ body{background:linear-gradient(180deg,#fcf8f8 0%,#f9f1f3 48%,#fcf8f8 100%)}
 
 /* Le texte courant reprend la famille élégante des titres et des boutons */
 p,li,.faq-answer,.faq-health-note p,.about-copy>p,.services-heading>p,.shop-copy>p,.ebook-copy>p,.contact-main>p,.contact-item p{font-family:var(--font-display)!important;color:#4b3e42!important}
+.art-third-ring{position:absolute;left:50%;top:50%;width:calc(min(36vw,430px) + 100px);aspect-ratio:1;border:1px solid rgba(177,128,104,.38);border-radius:51% 49% 50% 48% / 48% 51% 49% 52%;transform:translate(-50%,-50%) rotate(14deg);pointer-events:none;z-index:1}
+@media(max-width:700px){.art-third-ring{width:calc(min(76vw,360px) + 60px)}}
